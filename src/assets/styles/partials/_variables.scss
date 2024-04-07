@@ -1,0 +1,76 @@
+// breakpoint variables
+$tablet: 768px;
+$desktop: 1280px;
+
+// font weights
+$semi-bold: 600;
+$regular: 400;
+
+// colors
+
+//fonts
+// mobile
+$mob-page-header-txt: 1.75rem;
+$mob-page-header-lh: 2.25rem;
+$mob-subheader-txt: 1.25rem;
+$mob-subheader-lh: 1.75rem;
+$mob-button-lab-link-txt: 0.8125rem;
+$mob-button-lab-link-lh: 1.25rem;
+$mob-table-header-txt: 0.6875rem;
+$mob-table-header-lh: 1rem;
+$mob-body-L-txt: 0.9375rem;
+$mob-body-L-lh: 1.625rem;
+$mob-body-M-txt: 0.8125rem;
+$mob-body-M-lh: 1.25rem;
+$mob-body-S-txt: 0.6875rem;
+$mob-body-S-lh: 1rem;
+
+// tablet - desktop
+$tab-page-header-txt: 2rem;
+$tab-page-header-lh: 2.5rem;
+$tab-subheader-txt: 1.5rem;
+$tab-subheader-lh: 2rem;
+$tab-button-lab-link-txt: 0.875rem;
+$tab-button-lab-link-lh: 1.375rem;
+$tab-table-header-txt: 0.75rem;
+$tab-table-header-lh: 1.125rem;
+$tab-body-L-txt: 1rem;
+$tab-body-L-lh: 1.75rem;
+$tab-body-M-txt: 0.875rem;
+$tab-body-M-lh: 1.375rem;
+$tab-body-S-txt: 0.75rem;
+$tab-body-S-lh: 1.125rem;
+
+// padding - margins
+// mobile
+$mob-pad-side: 0 1rem;
+$mob-header-pad: 2rem 0 1.5rem 0;
+$mob-table-header-pad: 1rem 0 0.25rem 0;
+
+$mob-pad-specific-sides: 1rem;
+$mob-pad-specific-between-sub-components: 1rem;
+$mob-pad-specific-before-sub-header: 1.5rem;
+$mob-pad-specific-after-sub-header: 0.25rem;
+
+$tab-pad-specific-sides: 3rem;
+
+$desk-pad-specific-sides: 5rem;
+
+// tablet
+$tab-pad-side: 0 2rem;
+
+// buttons -fields
+$mob-b-f-height: 2.25rem;
+$tab-b-f-height: 2.375rem;
+$b-f-pad: 0 1rem;
+$b-f-rad: 1.25rem;
+$space: 0.25rem;
+$default-outline: 1px solid #5c667e;
+$active-outline: 1px solid #3e66e5;
+$error-outline: 1px solid #c94515;
+
+//tags
+$mob-tag-h: 1.5rem;
+$tab-tag-h: 1.625rem;
+$tag-padding: 0.5rem;
+$tag-rad: 1.25rem;
