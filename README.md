@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Provogue
 
-## Available Scripts
+## Slogan
 
-In the project directory, you can run:
+Provoke. En Vogue. Provogue.
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Provogue is a web application that provides tailors with everything they need to book clients and get paid easier.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Problem
 
-### `npm test`
+The purpose of Provogue is simply to allow artists to focus on their craft. Tailors have to spend too much time focusing on the mundane things that are necessary to run a business. Provogue is supposed to relieve tailors so that they can focus on making beautiful clothes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Profile
 
-### `npm run build`
+The web app is primarily intended for tailors. However other trade professionals may use it how they please.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-Invoice generator
+-Contract generator
+-Questionaire generator
+-Quote generator
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Implementation
 
-### `npm run eject`
+### Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-ReactJS
+-JavaScript
+-SASS
+-MySQL
+-Knex
+-Maybe Clerk Api
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### APIs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+I plan to create and use my own REST APIs
 
-## Learn More
+### Sitemap
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-Home page - The main page that users see when they visit
+-Login page - accessible from login button on header. Page for signing in.
+-Example page - Shows examples of the products we have on offer.
+-Products page - Lists each product we offer and allows a user to select the desired product.
+-Invoice page - Page to generate an invoice for a customer
+-Contract page - Page to generate a contract for a customer
+-Questionaire page - Page to generate a questionaire (To get requirements and specifications) for a customer.
+-Quote page - Page to generate a quote for a customer (for a service)
 
-### Code Splitting
+### Mockups
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
 
-### Analyzing the Bundle Size
+![Home page](./assets/image-1.png)
+![login page](./assets/image.png)
+![footer](./assets/footer.png)
+![examples](./assets/examples.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Data
 
-### Making a Progressive Web App
+![relationships](./assets/relationships.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Endpoints
 
-### Advanced Configuration
+These are rough drafts at the moment.
+-Login/ signup endpoints
+-Fetch customer booking information
+-Post new customer booking
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Auth
 
-### Deployment
+I might use Passport. Or JWT authentication depending on time. This is because I want to implement Social signin with Google and other platforms.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Roadmap
 
-### `npm run build` fails to minify
+I will start with the Front-end first so that I would have something to submit at the very least.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Nice-to-haves
+
+None at the moment.
