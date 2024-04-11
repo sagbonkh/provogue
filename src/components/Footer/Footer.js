@@ -9,10 +9,10 @@ function Footer() {
       <div className="footer__main">
         <h3 className="footer__title">Provogue</h3>
         <div className="footer__links">
-          <p className="footer__text">ABOUT</p>
-          <p className="footer__text">HELP</p>
-          <p className="footer__text">POLICY</p>
-          <p className="footer__text">CONTACT</p>
+          <p className="footer__text">About</p>
+          <p className="footer__text">Help</p>
+          <p className="footer__text">Policy</p>
+          <p className="footer__text">Contact</p>
         </div>
       </div>
       <div className="sub__footer">

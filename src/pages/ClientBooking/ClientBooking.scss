@@ -1,7 +1,7 @@
 @use "../../assets/styles/partials/variables" as *;
 @use "../../assets/styles/partials/mixins" as *;
 
-.register {
+.booking {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,18 +16,19 @@
     color: $grey;
     margin-bottom: 0;
   }
-  &__location {
+  &__sect {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
+    width: 60%;
   }
 }
 
-.client {
+.booking-form {
   display: flex;
   flex-direction: column;
+  width: 60%;
+  margin-top: 2rem;
 
   &__input {
     margin-bottom: 1rem;
@@ -37,13 +38,14 @@
     padding: 0.2rem 0.4rem;
   }
 
-  &__dropdown {
-    height: 2rem;
-    margin-bottom: 1rem;
+  &__message {
+    height: 5.5rem;
     border-radius: 0.6rem;
     border: solid 0.1px $grey;
-    padding: 0.4rem;
+    padding: 0.2rem 0.4rem;
+    margin-bottom: 1rem;
   }
+
   &__btn {
     height: 2.5rem;
     color: $white;
@@ -51,10 +53,11 @@
     border: none;
     border-radius: 0.6rem;
     margin-top: 3rem;
+    width: 100%;
   }
-  @include tablet {
-    width: 50%;
-  }
-  @include desktop {
+  &__btn-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
