@@ -1,0 +1,13 @@
+@use "./typography" as *;
+
+* {
+  font-family: "Inter";
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 12px;
+}
