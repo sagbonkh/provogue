@@ -1,0 +1,26 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+.why {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    color: $black;
+  }
+  &__list {
+    width: 60%;
+  }
+  &__li {
+    color: $grey;
+  }
+  &__btn {
+    @include button-style;
+  }
+  @include tablet {
+    margin-top: 2rem;
+  }
+  @include desktop {
+    margin-top: 2.25rem;
+  }
+}

@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import woman from "../../assets/images/woman.jpeg";
 import "./HomePage.scss";
 import HomeFeatures from "../../components/HomeFeatures/HomeFeatures";
+import WhyComp from "../../components/WhyComp/WhyComp";
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
         <img src={woman} alt="hero" className="home__hero" />
       </div>
       <HomeFeatures />
+      <WhyComp />
       <Footer />
     </section>
   );

@@ -6,8 +6,8 @@ const HeaderMenu = ({ isOpen, onClose }) => {
     <div className={`side-menu ${isOpen ? "open" : ""}`}>
       <ul>
         <li>About</li>
-        <li>FAQ</li>
-        <li>Pricing</li>
+        <li>Tailor</li>
+        <li>Client</li>
       </ul>
       <button onClick={onClose}>Close</button>
     </div>

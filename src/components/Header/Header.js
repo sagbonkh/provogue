@@ -28,8 +28,8 @@ function Header() {
       <section className="header__items">
         <ul className="header__list">
           <li className="list__text">About</li>
-          <li className="list__text">FAQ</li>
-          <li className="list__text">Pricing</li>
+          <li className="list__text">Tailor</li>
+          <li className="list__text">Client</li>
         </ul>
         <div className="header__dropdown">
           <img
