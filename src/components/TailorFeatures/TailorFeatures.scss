@@ -5,17 +5,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__title {
-    color: $black;
-    font-size: 1rem;
-  }
-  &__section {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  width: 100%;
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // width: 70%;
+  }
+  &__title {
+    color: $black;
+    font-size: 1.5rem;
+  }
+  &__section {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
   }
   &__subtext {
     color: $grey;
@@ -33,43 +38,60 @@
   }
 
   @include tablet {
-    .tailor-features {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+      flex-direction: row;
+    }
+    &__sections {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 70%;
+    }
+    &__img-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__section {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+    &__section:hover {
+      background-color: #f0f0f0;
+    }
+    &__text-container {
+      display: flex;
       flex-direction: column;
       align-items: center;
-
-      &__container {
-        display: flex;
-      }
-
-      &__img {
-        // width: 60%;
-      }
-      &__img-container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-      }
-      &__section {
-        margin-top: 0;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-      }
-      &__section:hover {
-        background-color: #f0f0f0;
-      }
-      &__text-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
     }
   }
 }
 
 .container {
   width: 100%;
+}
+
+.active-image {
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.img_div {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
 }
