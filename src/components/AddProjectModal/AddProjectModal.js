@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
 import "./AddProjectModal.scss";
+import Datetime from "react-datetime";
+import "react-datetime/css/react-datetime.css";
 
 const AddProjectModal = ({ isOpen, closeModal }) => {
   // State to manage form inputs
@@ -22,6 +24,11 @@ const AddProjectModal = ({ isOpen, closeModal }) => {
     event.preventDefault();
 
     closeModal();
+  };
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
   };
 
   return (
@@ -57,7 +64,19 @@ const AddProjectModal = ({ isOpen, closeModal }) => {
           value={formData.description}
           onChange={handleChange}
         />
-        {/* Add more input fields for other project details */}
+        <div className="booking-form__datepicker">
+          <label htmlFor="date" className="booking-form__label">
+            Select a date *
+          </label>
+          <Datetime
+            value={selectedDate}
+            onChange={handleDateChange}
+            inputProps={{
+              placeholder: "Select a date",
+              className: "booking-form__input",
+            }}
+          />
+        </div>
         <button type="submit">Add Project</button>
       </form>
       <button onClick={closeModal}>Close Modal</button>
