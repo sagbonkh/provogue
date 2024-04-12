@@ -1,0 +1,55 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &__text {
+    display: flex;
+    font-size: $mob-body-M-txt;
+  }
+  &__search {
+    display: flex;
+  }
+  &__btn {
+    @include button-style;
+    margin-right: 1.5rem;
+  }
+  &__section {
+    padding: 0 1rem;
+  }
+  @include tablet {
+    padding: 0 1.5rem;
+  }
+  @include tablet {
+    padding: 0 2rem;
+  }
+}
+.subheader {
+  display: flex;
+}
+
+.table-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.footer-div {
+  margin-top: auto;
+}

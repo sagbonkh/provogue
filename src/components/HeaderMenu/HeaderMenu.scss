@@ -5,6 +5,7 @@
   right: 0;
   bottom: 0;
   width: 250px;
+  height: fit-content;
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -26,8 +27,4 @@
 }
 
 .side-menu button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
 }

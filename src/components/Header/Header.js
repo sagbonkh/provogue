@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate, NavLink } from "react-router-dom"; // Import useNavigate hook
 import "./Header.scss";
 import userIcon from "../../assets/icons/icon-user.png";
 import logout from "../../assets/icons/icon-logout.png";
@@ -8,6 +9,7 @@ import HeaderMenu from "../HeaderMenu/HeaderMenu.js"; // Import HeaderMenu compo
 function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleIconClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -24,12 +26,28 @@ function Header() {
 
   return (
     <header className="header">
-      <h3 className="header__title">Provogue</h3>
+      <h3 className="header__title">
+        <NavLink to="/" className="navlinks__title">
+          Provogue
+        </NavLink>
+      </h3>
       <section className="header__items">
         <ul className="header__list">
-          <li className="list__text">About</li>
-          <li className="list__text">Tailor</li>
-          <li className="list__text">Client</li>
+          <li className="list__text">
+            <NavLink to="/" className="navlinks__text">
+              About
+            </NavLink>
+          </li>
+          <li className="list__text">
+            <NavLink to="/redirect-tailor" className="navlinks__text">
+              Tailor
+            </NavLink>
+          </li>
+          <li className="list__text">
+            <NavLink to="/" className="navlinks__text">
+              Client
+            </NavLink>
+          </li>
         </ul>
         <div className="header__dropdown">
           <img
