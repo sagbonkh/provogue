@@ -8,6 +8,14 @@
     display: flex;
     font-size: $mob-body-M-txt;
   }
+  &__title {
+    margin-top: 2rem;
+  }
+  &__subtitle {
+    color: $black;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
   &__search {
     display: flex;
   }
@@ -36,7 +44,7 @@
 .table {
   border-collapse: collapse;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .table th,
@@ -52,4 +60,20 @@
 
 .footer-div {
   margin-top: auto;
+}
+
+.tailor-page {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  overflow-x: auto;
+  @include tablet {
+    flex-direction: row;
+  }
+  &__main {
+    @include tablet {
+      padding-left: 2rem;
+      flex-grow: 1;
+    }
+  }
 }
