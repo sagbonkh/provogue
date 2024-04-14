@@ -1,0 +1,98 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+.tailor-features {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    color: $black;
+    font-size: 1.5rem;
+  }
+  &__section {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+  &__subtext {
+    color: $grey;
+  }
+  &__img {
+    width: 60%;
+  }
+  &__subtitle {
+    color: $black;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  &__text {
+    color: $grey;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+      flex-direction: row;
+    }
+    &__sections {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 70%;
+    }
+    &__img-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__section {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    &__section:hover {
+      background-color: #f0f0f0;
+    }
+    &__text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.active-image {
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.img_div {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__provogue {
+    color: $orange;
+  }
+  @include tablet {
+    &__container {
+      width: 50%;
+    }
+  }
+}

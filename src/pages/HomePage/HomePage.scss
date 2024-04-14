@@ -1,0 +1,56 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+.overall {
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 0 1.5rem;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  &__textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  &__hero {
+    width: 80%;
+  }
+  &__title {
+    color: $black;
+  }
+  &__subtext {
+    color: $grey;
+  }
+  &__btn {
+    @include button-style;
+    margin-bottom: 2rem;
+  }
+
+  @include tablet {
+    flex-direction: row;
+
+    &__textarea {
+      align-items: flex-start;
+      padding: 1rem;
+    }
+    &__subtext {
+      margin-top: 0;
+      margin-bottom: 19.92px;
+    }
+    &__hero {
+      width: 50%;
+    }
+    &__btn {
+      width: 40%;
+    }
+  }
+}

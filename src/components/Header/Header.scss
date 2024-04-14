@@ -77,7 +77,7 @@
   }
   // Show the menu items if the screen width is less than 1280px
   @include desktop {
-    padding: 0rem 4rem;
+    padding: 2rem 4rem;
     &__text {
       display: block;
     }
@@ -94,5 +94,16 @@
   &__text {
     list-style: none;
     padding-left: 1rem;
+  }
+}
+
+.navlinks {
+  &__title {
+    color: $orange;
+    text-decoration: none;
+  }
+  &__text {
+    color: $black;
+    text-decoration: none;
   }
 }

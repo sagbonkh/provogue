@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Import useNavigate hook
 import "./Header.scss";
 import userIcon from "../../assets/icons/icon-user.png";
 import logout from "../../assets/icons/icon-logout.png";
@@ -24,12 +25,28 @@ function Header() {
 
   return (
     <header className="header">
-      <h3 className="header__title">Provogue</h3>
+      <h3 className="header__title">
+        <NavLink to="/" className="navlinks__title">
+          Provogue
+        </NavLink>
+      </h3>
       <section className="header__items">
         <ul className="header__list">
-          <li className="list__text">About</li>
-          <li className="list__text">FAQ</li>
-          <li className="list__text">Pricing</li>
+          <li className="list__text">
+            <NavLink to="/about" className="navlinks__text">
+              About
+            </NavLink>
+          </li>
+          <li className="list__text">
+            <NavLink to="/login" className="navlinks__text">
+              Tailor
+            </NavLink>
+          </li>
+          <li className="list__text">
+            <NavLink to="/client" className="navlinks__text">
+              Client
+            </NavLink>
+          </li>
         </ul>
         <div className="header__dropdown">
           <img
