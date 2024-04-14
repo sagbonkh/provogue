@@ -34,12 +34,12 @@ function Header() {
       <section className="header__items">
         <ul className="header__list">
           <li className="list__text">
-            <NavLink to="/" className="navlinks__text">
+            <NavLink to="/about" className="navlinks__text">
               About
             </NavLink>
           </li>
           <li className="list__text">
-            <NavLink to="/redirect-tailor" className="navlinks__text">
+            <NavLink to="/login" className="navlinks__text">
               Tailor
             </NavLink>
           </li>

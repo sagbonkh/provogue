@@ -25,28 +25,41 @@ function LoginPage() {
       console.error("Login error:", err);
     }
   };
+  const closeRegister = () => {
+    navigate("/");
+  };
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
-        <h2>Login</h2>
-        <div>
-          <label>Email:</label>
+    <div className="login">
+      <img
+        src={close}
+        alt="close"
+        className="register-close"
+        onClick={closeRegister}
+      />
+      <form onSubmit={handleLogin} className="login__form">
+        <h2 className="login__title">Login</h2>
+        <div className="login__div">
+          <label className="login__label">Email:</label>
           <input
             type="text"
             value={email}
+            className="login__input"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div>
-          <label>Password:</label>
+        <div className="login__div">
+          <label className="login__label">Password:</label>
           <input
             type="password"
+            className="login__input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="login__btn">
+          Login
+        </button>
         {error && <p>{error}</p>}
       </form>
     </div>
