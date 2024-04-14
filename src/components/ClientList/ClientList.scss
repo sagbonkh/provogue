@@ -1,0 +1,78 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.clientList {
+  &__grid {
+    display: grid;
+    grid-template-columns: 0.6fr 0.54fr 1fr;
+    gap: 2px;
+    width: 100%;
+    border: 0.1px solid $grey;
+    border-radius: 1rem;
+    margin: 1rem 0;
+  }
+  &__input {
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    border-radius: 0.6rem;
+    border: solid 0.1px $grey;
+    padding: 0.2rem 0.4rem;
+    width: 90%;
+  }
+  &__searchbar {
+    position: relative;
+    width: 100%;
+  }
+  &__sect {
+    display: contents;
+  }
+  &__text {
+    padding: 8px;
+    text-align: left;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__title {
+    color: $black;
+  }
+  &__btn {
+    @include button-style;
+    width: 30%;
+    height: 2rem;
+  }
+  @include tablet {
+    &__grid {
+      width: 60%;
+    }
+    &__searchbar {
+      width: 40%;
+    }
+    &__text {
+      font-size: 0.9rem;
+    }
+    &__input {
+      height: 2rem;
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+    &__btn {
+      height: 2.5rem;
+      width: 20%;
+      font-size: 0.9rem;
+    }
+  }
+  @include desktop {
+    padding: 0 4rem;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  left: 15.7rem;
+  top: 0.3rem;
+  @include tablet {
+    left: 83%;
+  }
+}

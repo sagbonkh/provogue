@@ -1,0 +1,74 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.client-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.clients {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__txt-sect {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+  }
+  &__images {
+    display: flex;
+    align-items: stretch;
+  }
+  &__hero {
+    width: 60%;
+    max-height: 80vh;
+    object-fit: cover;
+  }
+  &__img-set {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 0.7rem;
+  }
+  &__img {
+    flex: 1;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    max-height: 25.9vh;
+  }
+  &__img:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    flex-direction: row;
+  }
+  @include desktop {
+    padding: 0 4rem;
+
+    &__title {
+      font-size: 1.5rem;
+      color: $black;
+    }
+
+    &__subtext {
+      font-size: 1.2rem;
+      color: $grey;
+    }
+  }
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    width: 70%;
+  }
+}

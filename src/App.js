@@ -6,6 +6,7 @@ import ClientRegisterPage from "./pages/ClientRegisterPage/ClientRegisterPage";
 import ClientBooking from "./pages/ClientBooking/ClientBooking";
 import TailorDashboard from "./pages/TailorDashboard/TailorDashboard";
 import TailorRedirect from "./pages/TailorRedirect/TailorRedirect";
+import TailorsClients from "./pages/TailorsClients/TailorsClients";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="register-client" element={<ClientRegisterPage />} />
         <Route path="booking-client" element={<ClientBooking />} />
-        <Route path="tailor" element={<TailorDashboard />} />
-        <Route path="redirect-tailor" element={<TailorRedirect />} />
+        <Route path="/tailor/:id" element={<TailorDashboard />} />
+        <Route path="/redirect-tailor" element={<TailorRedirect />} />
+        <Route path="/tailor/:id/clients" element={<TailorsClients />} />
       </Routes>
     </BrowserRouter>
   );

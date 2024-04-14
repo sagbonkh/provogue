@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./TailorDashboard.scss";
-import searchIcon from "../../assets/icons/search-24px.svg";
+// import searchIcon from "../../assets/icons/search-24px.svg";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import AddProjectModal from "../../components/AddProjectModal/AddProjectModal";
