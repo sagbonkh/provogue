@@ -4,8 +4,13 @@ import woman from "../../assets/images/woman.jpeg";
 import "./HomePage.scss";
 import HomeFeatures from "../../components/HomeFeatures/HomeFeatures";
 import WhyComp from "../../components/WhyComp/WhyComp";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate = useNavigate();
+  const onClickSubmit = () => {
+    navigate(`/register`);
+  };
   return (
     <section className="overall">
       <Header />
@@ -13,7 +18,9 @@ function HomePage() {
         <div className="home__textarea">
           <h1 className="home__title">Provoke. En Vogue. Provogue.</h1>
           <p className="home__subtext">Stirring Style. Evoking Elegance.</p>
-          <button className="home__btn">GET STARTED</button>
+          <button className="home__btn" onClick={onClickSubmit}>
+            GET STARTED
+          </button>
         </div>
         <img src={woman} alt="hero" className="home__hero" />
       </div>

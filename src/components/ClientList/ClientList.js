@@ -13,7 +13,7 @@ const ClientList = () => {
       if (id) {
         try {
           const response = await axios.get(
-            `http://localhost:8080/tailors/${id}/clients`
+            `http://localhost:5050/tailors/${id}/clients`
           );
           setClients(response.data);
         } catch (error) {

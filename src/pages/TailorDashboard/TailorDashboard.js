@@ -6,8 +6,10 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import AddProjectModal from "../../components/AddProjectModal/AddProjectModal";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { useNavigate, useParams } from "react-router-dom";
 
-function TailorDashboard({ tailorId }) {
+function TailorDashboard() {
+  const { id } = useParams();
   const [activeProjects, setActiveProjects] = useState([]);
   const [completedProjects, setCompletedProjects] = useState([]);
   const [editingCell, setEditingCell] = useState(null);
@@ -19,7 +21,7 @@ function TailorDashboard({ tailorId }) {
   const fetchProjects = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/tailors/${tailorId}/projects`
+        `http://localhost:5050/tailors/${id}/projects`
       );
       const projects = response.data;
       const active = projects.filter(
@@ -52,11 +54,11 @@ function TailorDashboard({ tailorId }) {
       const updatedProject = activeProjects[rowIndex];
       if (updatedProject.id) {
         await axios.put(
-          `http://localhost:8080/projects/${updatedProject.id}`,
+          `http://localhost:5050/projects/${updatedProject.id}`,
           updatedProject
         );
       } else {
-        await axios.post(`http://localhost:8080/projects`, updatedProject);
+        await axios.post(`http://localhost:5050/projects`, updatedProject);
       }
       setEditingCell(null);
     } catch (error) {
@@ -92,7 +94,7 @@ function TailorDashboard({ tailorId }) {
             <AddProjectModal
               isOpen={isModalOpen}
               closeModal={closeModal}
-              tailorId={tailorId}
+              tailorId={id}
               fetchProjects={fetchProjects}
             />
             {/* <div className="dashboard__search">

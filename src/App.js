@@ -7,7 +7,8 @@ import ClientBooking from "./pages/ClientBooking/ClientBooking";
 import TailorDashboard from "./pages/TailorDashboard/TailorDashboard";
 import TailorRedirect from "./pages/TailorRedirect/TailorRedirect";
 import TailorsClients from "./pages/TailorsClients/TailorsClients";
-import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/tailor/:id" element={<TailorDashboard />} />
         <Route path="/redirect-tailor" element={<TailorRedirect />} />
         <Route path="/tailor/:id/clients" element={<TailorsClients />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );

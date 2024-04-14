@@ -12,7 +12,7 @@ const TailorRedirect = () => {
 
   const fetchTailors = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/tailors/1");
+      const response = await axios.get("http://localhost:5050/tailors/1");
       setTailors(response.data);
       setIsLoading(false);
     } catch (error) {

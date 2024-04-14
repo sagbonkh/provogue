@@ -9,7 +9,7 @@ import HeaderMenu from "../HeaderMenu/HeaderMenu.js"; // Import HeaderMenu compo
 function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   const handleIconClick = () => {
     setIsDropdownOpen(!isDropdownOpen);

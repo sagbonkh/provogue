@@ -27,7 +27,7 @@ const AddProjectModal = ({ isOpen, closeModal, tailorId, fetchProjects }) => {
     event.preventDefault();
 
     try {
-      await axios.post("http://localhost:8080/projects", formData);
+      await axios.post("http://localhost:5050/projects", formData);
       closeModal();
       fetchProjects();
     } catch (error) {
