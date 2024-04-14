@@ -10,6 +10,7 @@ import TailorsClients from "./pages/TailorsClients/TailorsClients";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import About from "./pages/About/About";
+import ClientPage from "./pages/ClientPage/ClientPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/client" element={<ClientPage />} />
       </Routes>
     </BrowserRouter>
   );

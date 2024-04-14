@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import search from "../../assets/icons/search-24px.svg";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./ClientList.scss";
 import axios from "axios";
-import AddClientModal from "../AddClientModal/AddClientModal";
+// import AddClientModal from "../AddClientModal/AddClientModal";
 
 const ClientList = () => {
   const { id } = useParams();

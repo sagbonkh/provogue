@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import AddProjectModal from "../../components/AddProjectModal/AddProjectModal";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function TailorDashboard() {
   const { id } = useParams();

@@ -23,6 +23,9 @@
     text-decoration: none;
   }
 
+  &__li {
+    padding-right: 10%;
+  }
   @include tablet {
     flex-direction: column;
     padding-right: 2rem;

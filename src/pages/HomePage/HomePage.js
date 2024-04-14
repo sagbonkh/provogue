@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function HomePage() {
   const navigate = useNavigate();
   const onClickSubmit = () => {
-    navigate(`/register`);
+    navigate(`/login`);
   };
   return (
     <section className="overall">

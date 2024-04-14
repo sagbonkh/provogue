@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, NavLink } from "react-router-dom"; // Import useNavigate hook
+import { NavLink } from "react-router-dom"; // Import useNavigate hook
 import "./Header.scss";
 import userIcon from "../../assets/icons/icon-user.png";
 import logout from "../../assets/icons/icon-logout.png";
@@ -9,7 +9,6 @@ import HeaderMenu from "../HeaderMenu/HeaderMenu.js"; // Import HeaderMenu compo
 function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
 
   const handleIconClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -44,7 +43,7 @@ function Header() {
             </NavLink>
           </li>
           <li className="list__text">
-            <NavLink to="/" className="navlinks__text">
+            <NavLink to="/client" className="navlinks__text">
               Client
             </NavLink>
           </li>

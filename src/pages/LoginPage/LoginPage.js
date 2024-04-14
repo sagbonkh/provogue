@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./LoginPage.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import close from "../../assets/icons/close-24px.svg";
 
 function LoginPage() {
@@ -61,6 +61,9 @@ function LoginPage() {
           Login
         </button>
         {error && <p>{error}</p>}
+        <p>
+          New here? No worries <Link to="/register">Sign up</Link>
+        </p>
       </form>
     </div>
   );

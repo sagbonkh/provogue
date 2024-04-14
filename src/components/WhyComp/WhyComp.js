@@ -6,7 +6,7 @@ import "./WhyComp.scss";
 const WhyComp = () => {
   const navigate = useNavigate();
   const handleButtonClick = () => {
-    navigate("/");
+    navigate("/register");
   };
 
   return (

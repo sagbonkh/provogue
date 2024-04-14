@@ -11,7 +11,6 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  justify-content: space-between;
 
   &__txt-sect {
     width: 100%;
@@ -70,5 +69,6 @@
 
   @include tablet {
     width: 70%;
+    padding-left: 2%;
   }
 }
