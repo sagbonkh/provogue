@@ -1,98 +1,76 @@
-# Project Title
-
-Provogue
+# Provogue
 
 ## Slogan
-
 Provoke. En Vogue. Provogue.
 
 ## Overview
+**Provogue: Streamlining Tailoring and Client Engagement**
 
-Provogue: Streamlining Tailoring and Client Engagement
+Provogue is an innovative web application designed to revolutionize the way tailors manage bookings, client interactions, and projects. This platform allows tailors to focus on their craft by handling the operational aspects of business management seamlessly. For clients, Provogue provides a dynamic platform to easily monitor projects, provide specifications, and book services, making it the ideal solution for optimizing every aspect of the tailoring experience.
 
-Provogue is an innovative web application designed to revolutionize the way tailors manage bookings, client interactions, and projects. Tailors can effortlessly handle everything from client management to project execution, ensuring a seamless workflow. For clients, Provogue offers a dynamic platform to easily monitor projects, provide specifications, and book services. This dual-functionality makes Provogue the go-to solution for tailors and their clients, optimizing every aspect of the tailoring experience.
+### Problem Statement
+Provogue aims to alleviate the administrative burdens placed on tailors, enabling them to dedicate more time to creating exquisite garments. The platform addresses the need for an efficient, streamlined approach to managing the various mundane tasks necessary for running a successful tailoring business.
 
-### Problem
-
-The purpose of Provogue is simply to allow artists to focus on their craft. Tailors have to spend too much time focusing on the mundane things that are necessary to run a business. Provogue is supposed to relieve tailors so that they can focus on making beautiful clothes.
-
-### User Profile
-
-The web app is primarily intended for tailors as well as their clients. There will be two different types of accounts. Client and Tailor accounts. 
+### User Profiles
+The web app is designed for two main user groups:
+- **Tailors**: Professionals looking for an efficient way to manage client bookings, projects, and business operations.
+- **Clients**: Individuals seeking tailored services, with the ability to track projects, make bookings, and interact seamlessly with tailors.
 
 ### Features
-
--Tailors clients
--Tailor dashboard
--Tailor login and register
--And more to come
+- **Tailor Dashboard**: Central hub for tailors to manage clients, projects, and business metrics.
+- **Client and Tailor Accounts**: Distinct account functionalities that cater to the specific needs of each user type.
+- **Authentication**: Secure login and registration processes for tailors and clients.
+- **Dynamic Project Tracking**: Real-time updates and notifications for ongoing projects.
+- **More Features to Come**: Continued enhancements to improve user experience and expand functionalities.
 
 ### Tech Stack
-
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
-
--ReactJS
--JavaScript
--SASS
--MySQL
--Knex
+- **Frontend**: ReactJS, SASS for styling.
+- **Backend**: Node.js with Express.
+- **Database**: MySQL managed through Knex.
+- **Additional Libraries**: Specific libraries and tools used to enhance performance and UX will be listed here.
 
 ### APIs
+Custom APIs developed for this project include:
+- **GET /tailors/:id/clients**: Fetch a list of a tailor's clients.
+- **GET /tailors**: Fetch all tailors.
+- **GET /tailors/:id**: Fetch specific tailor details.
+- **GET /tailors/:id/projects**: Retrieve projects associated with a tailor.
+- **POST /tailors/login**: Handle tailor login.
 
-I created my own API's. These are the one's I have used in this iteration.
-- (Get) Tailors clients: http://localhost:5050/tailors/:id/clients
-- (Get) Tailors: http://localhost:5050/tailors
-- (Get) Single tailor: http://localhost:5050/tailors/:id
-- (Get) Tailor's Projects: http://localhost:5050/tailors/:id/projects
-- (Post) Tailor login: http://localhost:5050/tailors/login
 ### Sitemap
-
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
-
-- Home page
-- Login page 
-- About page
-- Registration page
-- Tailor dashboard
-- Tailor clients
+- **Home Page**: Introduction and overview of the app.
+- **Login Page**: User login for accessing personalized features.
+- **Registration Page**: Account creation for new users.
+- **Tailor Dashboard**: Main interface for tailor operations.
+- **Client Profile**: Dashboard for clients to manage bookings and view project status.
+- **About Page**: Information about the app's purpose and creators.
 
 ### Mockups
+![Home Page](./assets/image-1.png)
+![Login Page](./assets/image.png)
+![Footer](./assets/footer.png)
+![Examples](./assets/examples.png)
 
-![Home page](./assets/image-1.png)
-![login page](./assets/image.png)
-![footer](./assets/footer.png)
-![examples](./assets/examples.png)
-
-### Data
-
-![relationships](./assets/relationships.png)
+### Data Schema
+![Database Relationships](./assets/relationships.png)
 
 ### Endpoints
+- **"/"**: Home page
+- **"/tailor/:id"**: Tailor dashboard
+- **"/tailor/:id/clients"**: Tailor’s client list
+- **"/register"**: Signup/Registration page
+- **"/login"**: Login page
+- **"/about"**: About page
 
-These are rough drafts at the moment.
-- "/": Home pager
-- "/tailor/:id": Tailor dashboard
-- "/tailor/:id/clients": Tailors Clients
-- "/register": Signup/ Registration page
-- "/login": Login page
-- "/about": About page
-
-### Auth
-
-Created an API to handle this.
+### Authentication
+Implementation details about authentication and security measures.
 
 ## Roadmap
+Immediate next steps include the development of the front end to ensure a basic functional product is ready for initial testing and feedback.
 
-I will start with the Front-end first so that I would have something to submit at the very least.
-
-## Nice-to-haves
-- Come up with a better name for clients
-- Client dashboard
-- Client appointment booking
-- Client project tracking
-- Client select a tailor
-- More client related features
-- Tailor invoice generator,
-- Tailor receipt generator,
-- Tailor contract generator.
-
+## Nice-to-Haves
+Future enhancements under consideration:
+- **Client Dashboard**: Comprehensive overview for clients to manage their engagements.
+- **Advanced Booking System**: For clients to schedule appointments.
+- **Financial Tools**: Including invoice and receipt generation for tailors.
+- **Enhanced Communication Features**: Improved messaging and notifications.
