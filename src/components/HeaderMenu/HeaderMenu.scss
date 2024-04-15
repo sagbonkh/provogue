@@ -1,0 +1,30 @@
+// SideMenu.scss
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  height: fit-content;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.side-menu button {
+}

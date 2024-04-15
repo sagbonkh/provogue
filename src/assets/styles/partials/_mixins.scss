@@ -14,3 +14,12 @@
 @mixin padding-sides {
   padding: $mob-pad-side;
 }
+
+@mixin button-style {
+  height: 2.5rem;
+  color: $white;
+  background-color: $blue;
+  border: none;
+  border-radius: 0.6rem;
+  width: 12rem;
+}

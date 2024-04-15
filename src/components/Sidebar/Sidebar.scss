@@ -1,0 +1,50 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 0;
+    margin-top: 2rem;
+    color: $black;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+  &__item {
+    color: $grey;
+    text-decoration: none;
+  }
+
+  &__li {
+    padding-right: 10%;
+  }
+  @include tablet {
+    flex-direction: column;
+    padding-right: 2rem;
+
+    &__list {
+      flex-direction: column;
+    }
+    &__item {
+      font-size: $tab-body-S-txt;
+      margin-bottom: 0.5rem;
+    }
+    &__li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  @include desktop {
+    &__item {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

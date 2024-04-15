@@ -1,0 +1,75 @@
+@use "../../assets/styles/partials/variables" as *;
+@use "../../assets/styles/partials/mixins" as *;
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  &__title {
+    margin: 0;
+    color: $black;
+  }
+  &__label {
+    color: $grey;
+  }
+  &__text {
+    font-size: 12px;
+    color: $grey;
+    margin-bottom: 0;
+  }
+  &__location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  &__input {
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    border-radius: 0.6rem;
+    border: solid 0.1px $grey;
+    padding: 0.2rem 0.4rem;
+  }
+  &__div {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+  &__dropdown {
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.6rem;
+    border: solid 0.1px $grey;
+    padding: 0.4rem;
+  }
+  &__btn {
+    @include button-style;
+  }
+}
+
+.register-sect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
+  &__text {
+    font-size: 12px;
+    color: $grey;
+    margin-bottom: 0;
+  }
+  &__location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.register-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}

@@ -1,0 +1,36 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.close-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.modal-title {
+  color: $black;
+  font-size: $mob-page-header-txt;
+}
+.addForm {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    border-radius: 0.6rem;
+    border: solid 0.1px $grey;
+    padding: 0.2rem 0.4rem;
+  }
+  &__btn {
+    height: 2.5rem;
+    color: $white;
+    background-color: $blue;
+    border: none;
+    border-radius: 0.6rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  &__label {
+    color: $black;
+  }
+}
