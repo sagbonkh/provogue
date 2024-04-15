@@ -8,7 +8,9 @@ Provoke. En Vogue. Provogue.
 
 ## Overview
 
-Provogue is a web application that provides tailors with everything they need to book clients and get paid easier.
+Provogue: Streamlining Tailoring and Client Engagement
+
+Provogue is an innovative web application designed to revolutionize the way tailors manage bookings, client interactions, and projects. Tailors can effortlessly handle everything from client management to project execution, ensuring a seamless workflow. For clients, Provogue offers a dynamic platform to easily monitor projects, provide specifications, and book services. This dual-functionality makes Provogue the go-to solution for tailors and their clients, optimizing every aspect of the tailoring experience.
 
 ### Problem
 
@@ -16,16 +18,14 @@ The purpose of Provogue is simply to allow artists to focus on their craft. Tail
 
 ### User Profile
 
-The web app is primarily intended for tailors. However other trade professionals may use it how they please.
+The web app is primarily intended for tailors as well as their clients. There will be two different types of accounts. Client and Tailor accounts. 
 
 ### Features
 
--Invoice generator
--Contract generator
--Questionaire generator
--Quote generator
-
-## Implementation
+-Tailors clients
+-Tailor dashboard
+-Tailor login and register
+-And more to come
 
 ### Tech Stack
 
@@ -36,28 +36,27 @@ List technologies that will be used in your app, including any libraries to save
 -SASS
 -MySQL
 -Knex
--Maybe Clerk Api
 
 ### APIs
 
-I plan to create and use my own REST APIs
-
+I created my own API's. These are the one's I have used in this iteration.
+- (Get) Tailors clients: http://localhost:5050/tailors/:id/clients
+- (Get) Tailors: http://localhost:5050/tailors
+- (Get) Single tailor: http://localhost:5050/tailors/:id
+- (Get) Tailor's Projects: http://localhost:5050/tailors/:id/projects
+- (Post) Tailor login: http://localhost:5050/tailors/login
 ### Sitemap
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
--Home page - The main page that users see when they visit
--Login page - accessible from login button on header. Page for signing in.
--Example page - Shows examples of the products we have on offer.
--Products page - Lists each product we offer and allows a user to select the desired product.
--Invoice page - Page to generate an invoice for a customer
--Contract page - Page to generate a contract for a customer
--Questionaire page - Page to generate a questionaire (To get requirements and specifications) for a customer.
--Quote page - Page to generate a quote for a customer (for a service)
+- Home page
+- Login page 
+- About page
+- Registration page
+- Tailor dashboard
+- Tailor clients
 
 ### Mockups
-
-Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
 
 ![Home page](./assets/image-1.png)
 ![login page](./assets/image.png)
@@ -71,18 +70,29 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 ### Endpoints
 
 These are rough drafts at the moment.
--Login/ signup endpoints
--Fetch customer booking information
--Post new customer booking
+- "/": Home pager
+- "/tailor/:id": Tailor dashboard
+- "/tailor/:id/clients": Tailors Clients
+- "/register": Signup/ Registration page
+- "/login": Login page
+- "/about": About page
 
 ### Auth
 
-I might use Passport. Or JWT authentication depending on time. This is because I want to implement Social signin with Google and other platforms.
+Created an API to handle this.
 
 ## Roadmap
 
 I will start with the Front-end first so that I would have something to submit at the very least.
 
 ## Nice-to-haves
+- Come up with a better name for clients
+- Client dashboard
+- Client appointment booking
+- Client project tracking
+- Client select a tailor
+- More client related features
+- Tailor invoice generator,
+- Tailor receipt generator,
+- Tailor contract generator.
 
-None at the moment.
