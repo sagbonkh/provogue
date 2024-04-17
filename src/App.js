@@ -12,6 +12,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import About from "./pages/About/About";
 import ClientDashboard from "./pages/ClientDashboard/ClientDashboard";
 import ProjectRequest from "./pages/ProjectRequest/ProjectRequest";
+import ClientLogin from "./pages/ClientLogin/ClientLogin";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/tailor/:id/clients" element={<TailorsClients />} />
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/client-login" element={<ClientLogin />} />
         <Route path="/about" element={<About />} />
         <Route path="/client/:id" element={<ClientDashboard />} />
         <Route

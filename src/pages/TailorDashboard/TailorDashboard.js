@@ -24,6 +24,7 @@ function TailorDashboard() {
         `http://localhost:5050/tailors/${id}/projects`
       );
       const projects = response.data;
+      console.log("projects", projects);
       const active = projects.filter(
         (project) => project.status !== "Completed"
       );
@@ -108,6 +109,7 @@ function TailorDashboard() {
                 <tr>
                   <th>Project</th>
                   <th>Description</th>
+                  <th>Client</th>
                   <th>Cost</th>
                   <th>Start Date</th>
                   <th>End Date</th>
@@ -125,12 +127,12 @@ function TailorDashboard() {
                         <input
                           type="text"
                           name="name"
-                          value={project.name}
+                          value={project.project_name}
                           onChange={handleCellChange}
                           onBlur={() => saveCellEdit(rowIndex)}
                         />
                       ) : (
-                        <span>{project.name}</span>
+                        <span>{project.project_name}</span>
                       )}
                     </td>
                     <td onClick={() => handleCellClick(rowIndex, 1)}>
@@ -154,6 +156,21 @@ function TailorDashboard() {
                       editingCell.colIndex === 2 ? (
                         <input
                           type="text"
+                          name="client"
+                          value={project.client_name}
+                          onChange={handleCellChange}
+                          onBlur={() => saveCellEdit(rowIndex)}
+                        />
+                      ) : (
+                        <span>{project.client_name}</span>
+                      )}
+                    </td>
+                    <td onClick={() => handleCellClick(rowIndex, 3)}>
+                      {editingCell &&
+                      editingCell.rowIndex === rowIndex &&
+                      editingCell.colIndex === 3 ? (
+                        <input
+                          type="text"
                           name="cost"
                           value={project.cost}
                           onChange={handleCellChange}
@@ -163,10 +180,10 @@ function TailorDashboard() {
                         <span>{project.cost}</span>
                       )}
                     </td>
-                    <td onClick={() => handleCellClick(rowIndex, 3)}>
+                    <td onClick={() => handleCellClick(rowIndex, 4)}>
                       {editingCell &&
                       editingCell.rowIndex === rowIndex &&
-                      editingCell.colIndex === 3 ? (
+                      editingCell.colIndex === 4 ? (
                         <input
                           type="text"
                           name="start_date"
@@ -178,10 +195,10 @@ function TailorDashboard() {
                         <span>{project.start_date}</span>
                       )}
                     </td>
-                    <td onClick={() => handleCellClick(rowIndex, 4)}>
+                    <td onClick={() => handleCellClick(rowIndex, 5)}>
                       {editingCell &&
                       editingCell.rowIndex === rowIndex &&
-                      editingCell.colIndex === 4 ? (
+                      editingCell.colIndex === 5 ? (
                         <input
                           type="text"
                           name="end_date"
@@ -193,10 +210,10 @@ function TailorDashboard() {
                         <span>{project.end_date}</span>
                       )}
                     </td>
-                    <td onClick={() => handleCellClick(rowIndex, 5)}>
+                    <td onClick={() => handleCellClick(rowIndex, 6)}>
                       {editingCell &&
                       editingCell.rowIndex === rowIndex &&
-                      editingCell.colIndex === 5 ? (
+                      editingCell.colIndex === 6 ? (
                         <input
                           type="text"
                           name="payment_status"
@@ -208,10 +225,10 @@ function TailorDashboard() {
                         <span>{project.payment_status}</span>
                       )}
                     </td>
-                    <td onClick={() => handleCellClick(rowIndex, 6)}>
+                    <td onClick={() => handleCellClick(rowIndex, 7)}>
                       {editingCell &&
                       editingCell.rowIndex === rowIndex &&
-                      editingCell.colIndex === 6 ? (
+                      editingCell.colIndex === 7 ? (
                         <input
                           type="text"
                           name="status"
@@ -235,6 +252,7 @@ function TailorDashboard() {
                 <tr>
                   <th>Project</th>
                   <th>Description</th>
+                  <th>Client</th>
                   <th>Cost</th>
                   <th>Start Date</th>
                   <th>End Date</th>
@@ -245,8 +263,9 @@ function TailorDashboard() {
               <tbody>
                 {completedProjects.map((project, rowIndex) => (
                   <tr key={rowIndex}>
-                    <td>{project.name}</td>
+                    <td>{project.project_name}</td>
                     <td>{project.description}</td>
+                    <td>{project.client_name}</td>
                     <td>{project.cost}</td>
                     <td>{project.start_date}</td>
                     <td>{project.end_date}</td>

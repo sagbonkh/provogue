@@ -12,8 +12,7 @@ const ProjectRequestModal = ({ isOpen, closeModal, clientId }) => {
     client_id: clientId,
     service: "",
     description: "",
-    tailor_id: "",
-    end_date: "",
+    tailor_id: 1,
   });
 
   useEffect(() => {
@@ -30,12 +29,13 @@ const ProjectRequestModal = ({ isOpen, closeModal, clientId }) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    const updatedValue = name === "tailor_id" ? parseInt(value, 10) : value;
+    setFormData({ ...formData, [name]: updatedValue });
   };
 
   const handleDateChange = (date) => {
     const selectedDate = date ? date.format("YYYY-MM-DD") : "";
-    setFormData({ ...formData, end_date: selectedDate });
+    setFormData({ ...formData, due_date: selectedDate });
   };
 
   const handleSubmit = async (event) => {
@@ -54,6 +54,22 @@ const ProjectRequestModal = ({ isOpen, closeModal, clientId }) => {
       onRequestClose={closeModal}
       contentLabel="Add New Project Modal"
       appElement={document.getElementById("root")}
+      style={{
+        content: {
+          position: "absolute",
+          inset: "15%",
+          border: "1px solid rgb(204, 204, 204)",
+          background: "rgb(255, 255, 255)",
+          overflow: "auto",
+          outline: "none",
+          padding: "2.2%",
+          width: "60%",
+          height: "62%",
+        },
+        overlay: {
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+        },
+      }}
     >
       <img
         src={closeIcon}
@@ -113,7 +129,7 @@ const ProjectRequestModal = ({ isOpen, closeModal, clientId }) => {
             Due date
           </label>
           <Datetime
-            value={formData.end_date ? new Date(formData.end_date) : null}
+            value={formData.due_date ? new Date(formData.due_date) : null}
             onChange={handleDateChange}
             inputProps={{
               placeholder: "Select a date",

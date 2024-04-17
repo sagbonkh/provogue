@@ -57,8 +57,8 @@ const ClientDashboard = () => {
         end_date: updatedProject.end_date,
         cost: updatedProject.cost,
         payment_status: updatedProject.payment_status,
-        tailor_id: 1, // Ensure these IDs are correctly managed or dynamically set
-        client_id: 1, // Ensure these IDs are correctly managed or dynamically set
+        tailor_id: updatedProject.tailor_id,
+        client_id: id,
       };
       if (updatedProject.project_id) {
         await axios.put(

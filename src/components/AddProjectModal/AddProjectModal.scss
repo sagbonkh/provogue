@@ -20,6 +20,7 @@
     border-radius: 0.6rem;
     border: solid 0.1px $grey;
     padding: 0.2rem 0.4rem;
+    font-size: 1rem;
   }
   &__btn {
     height: 2.5rem;
@@ -28,9 +29,16 @@
     border: none;
     border-radius: 0.6rem;
     margin-top: 1rem;
-    width: 100%;
+    width: 50%;
+    font-size: 1rem;
   }
   &__label {
     color: $black;
+  }
+  @include desktop {
+    width: 50%;
+    &__input {
+      height: 2.3rem;
+    }
   }
 }

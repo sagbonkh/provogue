@@ -43,7 +43,7 @@ function Header() {
             </NavLink>
           </li>
           <li className="list__text">
-            <NavLink to="/client" className="navlinks__text">
+            <NavLink to="/client-login" className="navlinks__text">
               Client
             </NavLink>
           </li>

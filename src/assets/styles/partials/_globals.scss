@@ -1,13 +1,22 @@
 @use "./typography" as *;
+@use "./mixins" as *;
 
 * {
   font-family: "Inter";
 }
-
+h1 {
+  @include desktop {
+    font-size: 2rem;
+  }
+}
 p,
 li,
+h3,
 label,
 input,
 textarea {
   font-size: 12px;
+  @include desktop {
+    font-size: 1.3rem;
+  }
 }

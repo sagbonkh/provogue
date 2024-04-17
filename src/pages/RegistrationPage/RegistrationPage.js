@@ -22,10 +22,13 @@ const RegistrationPage = () => {
         password,
       });
       console.log("Registration successful:", response.data);
+      const userId = response.data.id;
+      console.log("id", userId);
+
       if (role === "client") {
-        navigate("/");
+        navigate(`/client/${userId}`);
       } else {
-        navigate(`/tailor/${response.data.id}`);
+        navigate(`/tailor/${userId}`);
       }
     } catch (error) {
       console.error("Registration failed:", error.response.data);

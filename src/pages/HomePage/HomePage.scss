@@ -47,10 +47,17 @@
       margin-bottom: 19.92px;
     }
     &__hero {
-      width: 50%;
+      width: 30%;
     }
     &__btn {
       width: 40%;
+    }
+  }
+  @include desktop {
+    justify-content: center;
+
+    &__btn {
+      height: 3rem;
     }
   }
 }
