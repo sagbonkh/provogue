@@ -43,41 +43,11 @@ function Header() {
             </NavLink>
           </li>
           <li className="list__text">
-            <NavLink to="/client" className="navlinks__text">
+            <NavLink to="/client-login" className="navlinks__text">
               Client
             </NavLink>
           </li>
         </ul>
-        <div className="header__dropdown">
-          <img
-            src={userIcon}
-            alt="user icon"
-            className="header__icon"
-            onClick={handleIconClick}
-          />
-          {isDropdownOpen && (
-            <ul className="header__dropdown-menu">
-              <li className="header__dropdown-item" onClick={handleSignOut}>
-                <div className="header__signout">
-                  <img src={logout} alt="logout" className="header__icon" />
-                  <p className="header__text">Sign Out</p>
-                </div>
-              </li>
-            </ul>
-          )}
-        </div>
-        <div className="header__dropdown menu">
-          <img
-            src={menu}
-            alt="menu icon"
-            className={`header__icon ${!isMenuOpen ? "hidden" : ""}`}
-            onClick={handleMenuClick}
-          />
-          {/* Conditionally render the HeaderMenu component */}
-          {isMenuOpen && (
-            <HeaderMenu isOpen={isMenuOpen} onClose={handleMenuClick} />
-          )}
-        </div>
       </section>
     </header>
   );

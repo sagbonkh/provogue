@@ -20,23 +20,11 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li className="sidebar__li">
-          <NavLink to="/" className="sidebar__item">
-            Invoice{" "}
-          </NavLink>
-        </li>
-        <li className="sidebar__li">
-          <NavLink to="/" className="sidebar__item">
-            Contract{" "}
-          </NavLink>
-        </li>
-        <li className="sidebar__li">
-          <NavLink to="/" className="sidebar__item">
-            Questionnaire{" "}
-          </NavLink>
-        </li>
-        <li className="sidebar__li">
-          <NavLink to="/" className="sidebar__item">
-            Quote{" "}
+          <NavLink
+            to={`/tailor/${id}/project-request`}
+            className="sidebar__item"
+          >
+            Requests{` `}
           </NavLink>
         </li>
       </ul>

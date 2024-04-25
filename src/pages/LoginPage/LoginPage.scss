@@ -6,10 +6,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
-  &__form {
-    width: 35%;
-  }
+
   &__title {
     color: $black;
   }
@@ -31,5 +30,21 @@
   &__btn {
     @include button-style;
     width: 100%;
+  }
+
+  @include tablet {
+    &__title {
+      font-size: 2rem;
+    }
+    &__form {
+      width: 35%;
+    }
+    &__input {
+      height: 3rem;
+    }
+    &__btn {
+      height: 3.5rem;
+      font-size: 1.5rem;
+    }
   }
 }
