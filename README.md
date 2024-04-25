@@ -58,6 +58,9 @@ Custom APIs developed for this project include:
 ### Mockups
 
 ![Home Page](./src/assets/images/mockup/mockup.png)
+![Register](./src/assets/images/mockup/registerPg.png)
+![Projects](./src/assets/images/mockup/projectDashboard.png)
+![Requests](./src/assets/images/mockup/requests.png)
 
 ### Data Schema
 

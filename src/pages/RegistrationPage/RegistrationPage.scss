@@ -47,13 +47,23 @@
     @include button-style;
   }
   @include desktop {
+    margin-top: 3rem;
     &__input {
       height: 2rem;
       padding: 1rem 1rem;
     }
+    &__div {
+      width: 50%;
+      margin-top: 1.5rem;
+    }
     &__dropdown {
       padding: 1rem;
       font-size: 1.5rem;
+    }
+    &__btn {
+      width: 50%;
+      height: 4rem;
+      margin-top: 2rem;
     }
   }
 }
