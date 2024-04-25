@@ -52,16 +52,30 @@ function TailorDashboard() {
 
   const saveCellEdit = async (rowIndex) => {
     try {
-      const updatedProject = activeProjects[rowIndex];
-      if (updatedProject.id) {
+      const projectToSave = activeProjects[rowIndex];
+
+      // Construct the updated project data matching the API requirements
+      const updatedProject = {
+        name: projectToSave.project_name,
+        description: projectToSave.description,
+        status: projectToSave.status,
+        start_date: projectToSave.start_date,
+        end_date: projectToSave.end_date,
+        cost: projectToSave.cost,
+        payment_status: projectToSave.payment_status,
+        tailor_id: id,
+        client_id: projectToSave.client_id,
+      };
+
+      if (projectToSave.id) {
         await axios.put(
-          `http://localhost:5050/projects/${updatedProject.id}`,
+          `http://localhost:5050/projects/${projectToSave.id}`,
           updatedProject
         );
-      } else {
-        await axios.post(`http://localhost:5050/projects`, updatedProject);
       }
+
       setEditingCell(null);
+      fetchProjects(); // Refetch projects to update the list
     } catch (error) {
       console.error("Error updating project:", error);
     }

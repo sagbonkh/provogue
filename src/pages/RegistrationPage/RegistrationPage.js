@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./RegistrationPage.scss";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ const RegistrationPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("client");
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   const handleRegister = async (event) => {
     event.preventDefault();
@@ -37,6 +38,24 @@ const RegistrationPage = () => {
   const closeRegister = () => {
     navigate("/");
   };
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDateTime(new Date()); // Update date and time every minute
+    }, 60000);
+
+    return () => clearInterval(timer); // Clear interval on component unmount
+  }, []);
+
+  const formattedDate = currentDateTime.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  const formattedTime = currentDateTime.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   return (
     <div>
@@ -48,11 +67,11 @@ const RegistrationPage = () => {
       />
       <div className="register-sect">
         <h1 className="register-sect__title">Register</h1>
-        <p className="register-sect__text">Let's help get you set up </p>
+        <p className="register-sect__text">Let's get you set up </p>
         <div className="register-sect__location">
           <p className="register-sect__text">Provogue</p>
-          <p className="register-sect__text">May 05, 2020</p>
-          <p className="register-sect__text">9:00 AM - 1:00 PM</p>
+          <p className="register-sect__text">{formattedDate}</p>
+          <p className="register-sect__text">{formattedTime}</p>
         </div>
       </div>
       <form onSubmit={handleRegister} className="register">

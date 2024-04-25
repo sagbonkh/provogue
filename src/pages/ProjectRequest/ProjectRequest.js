@@ -12,6 +12,18 @@ const ProjectRequest = () => {
   const { id } = useParams();
   const [projectRequests, setProjectRequests] = useState([]);
 
+  const [formData, setFormData] = useState({
+    tailor_id: id,
+    name: "",
+    description: "",
+    status: "In progress",
+    cost: "$100",
+    client_id: 1,
+    start_date: new Date().toISOString().slice(0, 10),
+    end_date: "",
+    payment_status: "Pending",
+  });
+
   useEffect(() => {
     fetchRequests();
   }, []);
@@ -28,17 +40,28 @@ const ProjectRequest = () => {
       console.error("Error fetching projects:", error);
     }
   };
-  useEffect(() => {
-    console.log("projects", projectRequests);
-  }, [projectRequests]);
 
   const onAccept = async (projectId) => {
     try {
-      await axios.put(`http://localhost:5050/orders/${projectId}`, {
-        status: "accepted",
-      });
-      fetchRequests();
-      navigate(`/tailor/${id}`);
+      const projectToAccept = projectRequests.find(
+        (project) => project.order_id === projectId
+      );
+      if (projectToAccept) {
+        const updatedFormData = {
+          ...formData,
+          name: projectToAccept.client_name,
+          description: projectToAccept.description,
+          end_date: projectToAccept.due_date,
+          client_id: projectToAccept.client_id,
+        };
+
+        await axios.put(`http://localhost:5050/orders/${projectId}`, {
+          status: "accepted",
+        });
+        await axios.post("http://localhost:5050/projects", updatedFormData);
+        fetchRequests();
+        navigate(`/tailor/${id}`);
+      }
     } catch (error) {
       console.error("Error accepting project:", error);
     }
